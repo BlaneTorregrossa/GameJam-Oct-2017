@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
 
-    public GameObject playerCam;
-
     private Vector3 lastPos;
     private Quaternion lastTurn;
     public float speed = 5f;
