@@ -28,6 +28,12 @@ public class PlayerControl : MonoBehaviour
         move = new Vector3(h, 0, v);
         var velocity = new Vector3(move.x, 0, move.z);
         rb.velocity = velocity * speed;
+
+        if(Input.GetKey(KeyCode.Q))
+        {
+            Application.Quit();
+        }
+
         //if (Input.GetKey(KeyCode.W))
         //{
         //    Vector3 position = this.transform.position;
