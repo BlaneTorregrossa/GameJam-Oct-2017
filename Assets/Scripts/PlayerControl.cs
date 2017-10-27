@@ -22,6 +22,7 @@ public class PlayerControl : MonoBehaviour
 
     void Update ()
     {
+        this.transform.position = new Vector3(this.transform.position.x, 1, this.transform.position.z);
         this.transform.rotation = lastTurn;
         var h = Input.GetAxis("Horizontal");
         var v = Input.GetAxis("Vertical");
