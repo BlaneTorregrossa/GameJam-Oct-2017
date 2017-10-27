@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerBehavior : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerBehavior : MonoBehaviour
     public GameObject failureMenu;
     public int playerHealth;
     public int playerKeys;
+    public Text keyCountText;
     
     void Start ()
     {
@@ -22,6 +24,7 @@ public class PlayerBehavior : MonoBehaviour
 
         playerHealth = player.health;
         playerKeys = player.keys;
+        keyCountText.text = "Keys: " + playerKeys.ToString();
 
         //  Only here if we ever expand max health to go higher than 1
         if (player.health <= 0)
